@@ -50,21 +50,24 @@ class _DicePageState extends State<DicePage> {
     }
   }
 
+  Widget dice({String imageName}) {
+    return Expanded(
+      child: FlatButton(
+        onPressed: rollDice,
+        child: Image.asset(imageName),
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Center(
       child: Row(
         children: <Widget>[
-          Expanded(
-            child: FlatButton(
-              onPressed: rollDice,
-              child: Image.asset('images/dice$leftDiceNumber.png'),
-            ),
+          dice(
+            imageName: 'images/dice$leftDiceNumber.png',
           ),
-          Expanded(
-            child: FlatButton(
-              onPressed: rollDice,
-              child: Image.asset('images/dice$rightDiceNumber.png'),
-            ),
+          dice(
+            imageName: 'images/dice$rightDiceNumber.png',
           ),
         ],
       ),
