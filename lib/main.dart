@@ -56,17 +56,13 @@ class _DicePageState extends State<DicePage> {
         children: <Widget>[
           Expanded(
             child: FlatButton(
-              onPressed: () {
-                rollDice();
-              },
+              onPressed: rollDice,
               child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
             child: FlatButton(
-              onPressed: () {
-                rollDice();
-              },
+              onPressed: rollDice,
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
           ),
